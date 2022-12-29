@@ -1,7 +1,6 @@
-package com.zestymouse.killthefatsquirrel;
+package com.zestymouse.SimpleCombatFramework;
 
 import android.app.Activity;
-import android.media.MediaPlayer;
 import android.widget.TextView;
 
 public class TextRenderer extends Thread{
@@ -30,6 +29,7 @@ public class TextRenderer extends Thread{
         this.textView = textView;
     }
 
+    boolean isRendering;
     TextView textView;
     String text;
     Activity activity;
@@ -38,11 +38,13 @@ public class TextRenderer extends Thread{
         this.setText(text);
         this.setActivity(activity);
         this.setTextView(textView);
+        isRendering = false;
     }
 
     @Override
     public void run() {
         super.run();
+        isRendering = true;
         String output;
 
         for(int i = 0; i <= text.length(); i++){
@@ -53,10 +55,10 @@ public class TextRenderer extends Thread{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            MediaPlayer mp = MediaPlayer.create(activity.getApplicationContext(), R.raw.beep);
-            mp.start();
+
 
         }
+        isRendering = false;
 
     }
 

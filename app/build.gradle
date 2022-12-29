@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.zestymouse.killthefatsquirrel'
+    namespace 'com.zestymouse.SimpleCombatFramework'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.zestymouse.killthefatsquirrel"
+        applicationId "com.zestymouse.SimpleCombatFramework"
         minSdk 26
         targetSdk 32
         versionCode 1

@@ -1,4 +1,4 @@
-package com.zestymouse.killthefatsquirrel;
+package com.zestymouse.SimpleCombatFramework;
 
 import org.junit.Test;
 

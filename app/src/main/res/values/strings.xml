@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Kill The Fat Squirrel</string>
     
-    <string-array name="calgary">
-        <item>Calgary wants to fight</item>
+    <string-array name="Fobby">
+        <item>Fobby wants to fight</item>
         <item>You hit like a girl</item>
         <item>Is that all you got?</item>
 
