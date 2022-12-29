@@ -33,10 +33,32 @@ public class Enemy extends Player {
     Drawable icon;
     String name;
     String dialogue[];
+    String defaultMessage;
+    String attackMessage;
+    TextRenderer t;
 
-    public Enemy(Drawable icon, String name, String[] dialogue){
-        setDialogue(dialogue);
+    public Enemy(Drawable icon, String name){
+        setHp(10);
+        setAtk(4);
         setName(name);
         setIcon(icon);
+        defaultMessage = name + " is standing menacingly";
+        attackMessage= name + " Attacks!";
     }
+
+    @Override
+    public int playerAttack(){
+        int seed = (int) (Math.random() * 100);
+        if (seed > 25){
+            lastHit = true;
+            setTurnText(name +" Hits!");
+            return atk;
+        }else{
+            lastHit = false;
+            setTurnText(name + " Missed");
+            return 0;
+        }
+    }
+
+
 }
